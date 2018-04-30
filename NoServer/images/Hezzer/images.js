@@ -1,0 +1,17 @@
+images = [
+"images/Hezzer/00.jpg",
+"images/Hezzer/01.jpg",
+"images/Hezzer/03.jpg",
+"images/Hezzer/04.jpg",
+"images/Hezzer/05.jpg",
+"images/Hezzer/06.jpg",
+"images/Hezzer/07.jpg",
+"images/Hezzer/08.jpg",
+"images/Hezzer/09.jpg",
+"images/Hezzer/10.jpg",
+"images/Hezzer/11.jpg",
+"images/Hezzer/12.jpg",
+"images/Hezzer/13.jpg",
+"images/Hezzer/14.jpg",
+"images/Hezzer/15.jpg",
+]

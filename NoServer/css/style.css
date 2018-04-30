@@ -1,0 +1,33 @@
+#talk {
+    margin-left: 30px;
+    font-style: italic;
+    text-indent: -10px;
+}
+#talk:before {
+    content: "\00bb "; 
+}
+#talk:after {
+    content: " \00ab";
+}
+
+#shout {
+    font-weight: bold;
+}
+#emph {
+    text-decoration: underline;
+}
+#iv_caption {
+    font-variant: small-caps;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+#iv_caption , #iv_navigation {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

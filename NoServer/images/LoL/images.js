@@ -1,0 +1,15 @@
+images = [
+"images/LoL/151.jpg",
+"images/LoL/156.jpg",
+"images/LoL/147.jpg",
+"images/LoL/157.jpg",
+"images/LoL/159.jpg",
+"images/LoL/153.jpg",
+"images/LoL/148.gif",
+"images/LoL/149.gif",
+"images/LoL/161.jpg",
+"images/LoL/152.jpg",
+"images/LoL/160.jpg",
+"images/LoL/000.jpg",
+"images/LoL/162.jpg",
+]

@@ -1,0 +1,12 @@
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.avi
+*.mp4
+*.flv
+*.mpg
+*.pyc
+.idea
+**/fonts/
+LoL.html

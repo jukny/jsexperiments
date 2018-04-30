@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>##name##</title>
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<img alt="No image found for ##name##" id="iv_photo" src="#" class="rounded">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+            <p id="iv_navigation">
+                <button id="iv_previous" type="button" class="btn btn-default">&laquo;</button>
+                <span id="iv_counter"></span>
+                <button id="if_next" type="button" class="btn btn-default">&raquo;</button>
+            </p>
+			<p id="iv_caption">
+			</p>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="images/##name##/captions.js"></script>
+    <script src="images/##name##/images.js"></script>
+    <script src="js/story.js"></script>
+    <script>
+        var collection = "##name##"
+        new Photo()
+    </script>
+</body>
+</html>
