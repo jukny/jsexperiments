@@ -12,5 +12,5 @@
 **/fonts/
 LoL.html
 NaughtyAnna.html
-/NoServer/images
-*/images
+**/images/*/*.js
+**/images/*/*.yml
