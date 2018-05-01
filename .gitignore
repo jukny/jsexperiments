@@ -8,5 +8,8 @@
 *.mpg
 *.pyc
 .idea
+
 **/fonts/
 LoL.html
+NaughtyAnna.html
+/NoServer/images
