@@ -3,9 +3,9 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse
 from sys import argv
 from collections import namedtuple
+from os import path
 
-
-class ContentType:
+class MimeType:
     html = 'text/html'
     js = 'text/javascript'
     css = 'text/css'
@@ -18,7 +18,7 @@ class ContentType:
 
 class MungoServer(BaseHTTPRequestHandler):
 
-    content_path = 'C:/Projects/NoServer/'
+    content_path = path.dirname(path.realpath(__file__))
     collection = ''
 
     def __set_headers(self, response):
@@ -28,8 +28,8 @@ class MungoServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
         path = urlparse(self.path).path
-        mime = getattr(ContentType, path.split('.')[-1], 'text/html')
-        if mime in ContentType.image:
+        mime = getattr(MimeType, path.split('.')[-1], 'text/html')
+        if mime in MimeType.image:
             try:
                 data_fp = open(f'{MungoServer.content_path}/{path}', 'rb')
             except IOError:
@@ -40,12 +40,12 @@ class MungoServer(BaseHTTPRequestHandler):
                 self.__set_headers(namedtuple('response', ('code', 'type'))(200, mime))
                 self.wfile.write(data_fp.read())
                 data_fp.close()
-        elif mime in ContentType.text:
+        elif mime in MimeType.text:
             try:
                 if not path or path == '/':
-                    file = MungoServer.content_path + f'{MungoServer.collection}.html'
+                    file = f'{MungoServer.content_path}/{MungoServer.collection}.html'
                 else:
-                    file = MungoServer.content_path + path
+                    file = f'{MungoServer.content_path}/{path}'
                 data_fp = open(file, 'rb')
             except IOError:
                 self.__set_headers(namedtuple('response', ('code', 'type'))('404', 'text/html'))

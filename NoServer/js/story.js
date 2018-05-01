@@ -75,7 +75,7 @@ class Photo {
     
     format (str) {
         var r = str.replace(/^-/,'')
-            r = r.replace(/[^/]\(/g, '"')
+            r = r.replace(/[^/]\(/g, ' "')
             r = r.replace(/([^/])\)/g, '$1"')
             r = r.replace(/\//g,'')
             r = r.replace(/_(.*)_/g, '<span id="emph">$1</span>')

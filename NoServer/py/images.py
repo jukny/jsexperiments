@@ -12,7 +12,7 @@ def files(path):
     name = path.replace('\\','/').split('/')[-1]
     template = template.replace('##name##', name)
     p = path.replace('\\','/')
-    with open(name + ".html", 'w+') as output:
+    with open(name.replace(' ','') + ".html", 'w+') as output:
         output.write(template)
     try:
         with open(f'{path}/captions.yml', 'r') as y:
