@@ -21,6 +21,9 @@ def files(path):
     except FileNotFoundError:
         print(f'No captions file found, creating with empty captions')
         image_list = [ i for i in os.listdir(path) if i.endswith(('.jpg', '.gif')) ]
+        with open(f'{path}/captions.yml', 'w') as y:
+            y.write(yaml.dump({k:[] for k in image_list}))
+        caps = {}
     except yaml.YAMLError as e:
         print(e)
         exit(1)

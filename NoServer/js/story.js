@@ -6,9 +6,11 @@ class Photo {
         this.setPhoto().setCaption().setCounter()
         var p = this             
         $('#iv_previous').click(function () {
+            console.log('previous')
             p.previous.setPhoto().setCaption().setCounter()
         })
         $('#iv_next').click(function () {
+            console.log('next')
             p.next.setPhoto().setCaption().setCounter()
         })
         
